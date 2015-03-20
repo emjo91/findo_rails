@@ -1,4 +1,63 @@
 FindoRails::Application.routes.draw do
+  
+  
+  # RESTFUL ROUTES
+  
+  # SHOW ALL
+  # This shows all the profiles for the dogs and owners.
+  get "/dogs" => 'dogs#show_all', as: "dog"
+  
+  get "/owners" => 'owners#show_all', as: "owner"
+  
+  
+  # CREATE
+  # This shows the form for creating a new dog and owner.
+  get "/dogs/new" => 'dogs#create', as: "new_dog"
+  
+  get "/owners/new" => 'owners#create', as: "new_owner"
+  
+  
+  # SAVE
+  # This saves the form data from create, no route name.
+  post "/dogs" => 'dogs#save'
+  
+  post "/owners" => 'owners#save'
+  
+  
+  # EDIT
+  # This shows the edit form for dogs and owners.
+  get "/dogs/:id/edit" => 'dogs#edit', as: "edit_dog_id"
+  
+  get "/owners/:id/edit" => 'owners#edit', as: "edit_owner_id"
+  
+  
+  # UPDATE
+  # This updates the record and saves the edit form data, not sure if I can have videogame as title. 
+  put "/dogs/:id" => 'dogs#update'
+  
+  put "/owners/:id" => 'owners#update'
+  
+  
+  # FIND
+  # This shows the data for a given record.
+  get "/dogs/:id" => 'dogs#find'
+  
+  get "/owners/:id" => 'owners#find'
+  
+  
+  # DELETE
+  # This deletes the dogs and owners. 
+  delete "/dogs/:id" => 'dogs#delete_confirm'
+  
+  delete "/owners/:id" => 'owners#delete_confirm'
+  
+  
+  # HOMEPAGE
+  get "/findo" => 'videogames#home'
+  
+  
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
