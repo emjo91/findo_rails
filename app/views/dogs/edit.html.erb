@@ -1,0 +1,21 @@
+<h1>Edit <%= @dog.name %></h1>
+
+<%= form_for @dog, :url => { :action => "update", :via => :put} do |f| %>
+<p><%= f.label "name" %></p>
+<%= f.text_field ("name") %>
+<p><%= f.label "breed" %></p>
+<%= f.text_field ("breed") %>
+<p><%= f.label "age" %></p>
+<%= f.text_field ("age") %>
+<p><%= f.label "gender" %></p>
+<p class="radio"><%= f.radio_button("gender", 'Male') %> Male</p>
+<p class="radio"><%= f.radio_button("gender", 'Female') %> Female</p>
+<p><%= f.label "colour" %></p>
+<%= f.text_field ("colour") %>
+<p><%= f.label "serial_num" %></p>
+<%= f.text_field ("serial_num") %>
+<p><%= f.label "description" %></p>
+<%= f.text_area ("description") %>
+<br><br>
+<%= f.submit %>
+<% end %>

@@ -9,7 +9,9 @@
 
 <ul>
   <li><a href="/findo">Home</a></li>
-  <li><a href="#">Add Dog</a></li>
+  <li><%= link_to "Edit", "/owners/#{params[:id]}/edit" %></li>
+  <li><a href="http://localhost:3000/dogs/new">Add Dog</a></li>
+  <p>The link above will need to be edited when deployed</p>
 </ul>
 
 <p>Will be adding links to view all pets</p>

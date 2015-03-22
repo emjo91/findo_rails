@@ -8,13 +8,6 @@ class OwnersController < ApplicationController
   end
   
   
-  # Updates an edited form.
-  def update
-    
-    # redirects to the dog profile page.
-  end
-  
-  
   def create
     @owner = Owner.new
   end
@@ -30,12 +23,27 @@ class OwnersController < ApplicationController
   # Returns data from the table for a particular record.
   def find
     @owner = Owner.find(params[:id])
+    @dogs = Owner.find(params[:id])
   end
   
   
   # Returns all records in the table.
   def show_all
     @owners = Owner.all
+  end
+  
+  
+  def edit
+    @owner = Owner.find(params[:id])
+  end
+  
+  
+  # Updates an edited form.
+  def update
+    @owner = Owner.find(params[:id])
+    @owner.update_attributes(params[:owner])
+    redirect_to controller: "owners", action: "home"
+    # redirects to the dog profile page.
   end
   
 end

@@ -11,7 +11,7 @@
 
 <ul>
   <li><a href="/findo">Home</a></li>
-  <%= link_to "Edit", "/dogs/#{params[:id]}/edit" %>  
+  <li><%= link_to "Edit", "/dogs/#{params[:id]}/edit" %></li>
   <li><a href="/findo">Add Temperament</a></li>
   <li><%= link_to "Delete", "/dogs/#{params[:id]}", :method => :delete %></li>
 </ul>

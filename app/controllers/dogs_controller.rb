@@ -9,11 +9,6 @@ class DogsController < ApplicationController
     # Needs to redirect to the owner's page.
   end
   
-  # Updates an edited form.
-  def update
-    
-    # redirects to the dog profile page.
-  end
   
   def create
     @dog = Dog.new
@@ -37,6 +32,22 @@ class DogsController < ApplicationController
   # Returns all records in the table.
   def show_all
     @dogs = Dog.all
+  end
+  
+  
+  # This is working.
+  def edit
+    @dog = Dog.find(params[:id])
+  end
+  
+  
+  # Working
+  # Updates an edited form.
+  def update
+    @dog = Dog.find(params[:id])
+    @dog.update_attributes(params[:dog])
+    redirect_to controller: "owners", action: "home"
+    # I want this to redirect to the dog's profile
   end
   
 end
