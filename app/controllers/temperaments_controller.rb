@@ -1,0 +1,2 @@
+class TemperamentsController < ApplicationController
+end
