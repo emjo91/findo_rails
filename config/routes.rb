@@ -19,6 +19,7 @@ FindoRails::Application.routes.draw do
   
   # SAVE
   # This saves the form data from create, no route name.
+  # No ERB for this.
   post "/dogs" => 'dogs#save'
   
   post "/owners" => 'owners#save'
@@ -33,6 +34,7 @@ FindoRails::Application.routes.draw do
   
   # UPDATE
   # This updates the record and saves the edit form data, not sure if I can have videogame as title. 
+  # No ERB for this.
   put "/dogs/:id" => 'dogs#update'
   
   put "/owners/:id" => 'owners#update'
@@ -40,20 +42,23 @@ FindoRails::Application.routes.draw do
   
   # FIND
   # This shows the data for a given record.
+  # PROFILE LINK
   get "/dogs/:id" => 'dogs#find'
   
   get "/owners/:id" => 'owners#find'
   
   
   # DELETE
-  # This deletes the dogs and owners. 
-  delete "/dogs/:id" => 'dogs#delete_confirm'
+  # This deletes the dogs and owners.
+  # No ERB for this. 
+  delete "/dogs/:id" => 'dogs#delete'
   
-  delete "/owners/:id" => 'owners#delete_confirm'
+  # Owners cannot be deleted.
+  # delete "/owners/:id" => 'owners#delete'
   
   
   # HOMEPAGE
-  get "/findo" => 'dogs#home'
+  get "/findo" => 'owners#home'
   
   
   
