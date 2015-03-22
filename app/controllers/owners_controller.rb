@@ -29,13 +29,13 @@ class OwnersController < ApplicationController
   
   # Returns data from the table for a particular record.
   def find
-    @dog = Owner.find(params[:id])
+    @owner = Owner.find(params[:id])
   end
   
   
   # Returns all records in the table.
   def show_all
-    @dogs = Owner.all
+    @owners = Owner.all
   end
   
 end
