@@ -4,13 +4,16 @@
 <p>Breed: <%= @dog.breed %></p>
 <p>Age: <%= @dog.age %></p>
 <p>Gender: <%= @dog.gender %></p>
-<p>State: <%= @dog.colour %></p>
+<p>Colour: <%= @dog.colour %></p>
 <p>Description: <%= @dog.description %></p>
 <p>Serial Number: <%= @dog.serial_num %></p>
 
 
 <ul>
   <li><a href="/findo">Home</a></li>
+  <%= link_to "Edit", "/dogs/#{params[:id]}/edit" %>  
+  <li><a href="/findo">Add Temperament</a></li>
+  <li><%= link_to "Delete", "/dogs/#{params[:id]}", :method => :delete %></li>
 </ul>
 
 <p>Will be adding links to view all pets</p>
