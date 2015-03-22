@@ -53,7 +53,7 @@ FindoRails::Application.routes.draw do
   
   
   # HOMEPAGE
-  get "/findo" => 'videogames#home'
+  get "/findo" => 'dogs#home'
   
   
   
