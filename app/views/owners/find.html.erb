@@ -15,3 +15,9 @@
 </ul>
 
 <p>Will be adding links to view all pets</p>
+
+<ul>
+  <% @dogs.each do |dog| %>
+    <li><%=link_to dog.name, "http://localhost:3000/dogs/#{dog.id}" %></li>
+  <% end %>
+</ul>  

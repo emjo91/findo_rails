@@ -61,6 +61,14 @@ FindoRails::Application.routes.draw do
   get "/findo" => 'owners#home'
   
   
+  # FOUND
+  post "/found" => 'dogs#found'
+  
+  
+  # LOGIN PAGE
+  get "/login" => 'owners#login'
+  
+  
   
   
   # The priority is based upon order of creation:

@@ -19,7 +19,9 @@ class DogsController < ApplicationController
   # The redirect isn't working, yet...to direct to the profile page.
   def save
     new_dog = Dog.create(params[:dog])
-    redirect_to controller: "dogs", action: "/dogs/#{new_dog.id}"
+    redirect_to controller: "dogs", action: "http://localhost:3000/findo"
+    
+    # redirect_to controller: "dogs", action: "/dogs/#{new_dog.id}"
   end
   
   
@@ -48,6 +50,12 @@ class DogsController < ApplicationController
     @dog.update_attributes(params[:dog])
     redirect_to controller: "owners", action: "home"
     # I want this to redirect to the dog's profile
+  end
+  
+  
+  # Not sure if this will work yet.
+  def found
+    @dog = Dog.find_by_serial_num(params[:serial_num])
   end
   
 end

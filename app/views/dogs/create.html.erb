@@ -17,7 +17,8 @@
 <%= f.text_field ("serial_num") %>
 <p><%= f.label "description" %></p>
 <%= f.text_area ("description") %>
-
+<p><%= f.label "temperament_id" %></p>
+<%= f.select "temperament_id", temperament_list %>
 
 <br><br>
 <%= f.submit %>
