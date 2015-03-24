@@ -1,25 +1,26 @@
-<h1>Dog Found</h1>
+<div class="left small-half">
+  <h2 class="text-colour"><%= @dog.name %></h2>
 
-<h3>You've found: <%= @dog.name %>!</h3>
+  <p>Breed: <%= @dog.breed %></p>
+  <p>Age: <%= @dog.age %></p>
+  <p>Gender: <%= @dog.gender %></p>
+  <p>Colour: <%= @dog.colour %></p>
+  <p>Temperament: <%= @dog.temperament.temperament %>
+  <p>Description: <%= @dog.description %></p>
+</div><!-- end left -->
 
-<p>Breed: <%= @dog.breed %></p>
-<p>Age: <%= @dog.age %></p>
-<p>Gender: <%= @dog.gender %></p>
-<p>Colour: <%= @dog.colour %></p>
-<p>Temperament: <%= @dog.temperament.temperament %>
-<p>Description: <%= @dog.description %></p>
-<p>Owner Name: <%= @dog.owner.first_name + " " + @dog.owner.last_name %></p>
-<p>Owner Phone Number: <%= @dog.owner.phone_num %></p>
-<p>Owner Email: <%= @dog.owner.email %></p>
+<div class="right big-half">
+  <p>Owner Name: <%= @dog.owner.first_name + " " + @dog.owner.last_name %></p>
+  <p>Owner Phone Number: <%= @dog.owner.phone_num %></p>
+  <p>Owner Email: <%= @dog.owner.email %></p>
 
-<form action="#">
-  <p>Owner's Email</p>
-  <input name="email" placeholder="example@gmail.com">
-  <p>Content</p>
-  <input type="text_area" name="body">
-  <!-- This needs to be text_area -->
-  <br><br>
-  <input type="submit">
-</form>
-
-<a href="/findo">Home</a>
+  <form action="#">
+    <p>Owner's Email</p>
+    <input name="email" placeholder="example@gmail.com">
+    <p>Content</p>
+    <input type="text_area" name="body">
+    <!-- This needs to be text_area -->
+    <br><br>
+    <input type="submit">
+  </form>
+</div><!-- end right -->

@@ -1,0 +1,187 @@
+/* MAIN STUFF */
+
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background: #F34343;
+}
+
+header {
+  height: 100px;
+  margin: 20px 0;
+  border-bottom: 1px solid white;
+}
+
+/* CLASSES */
+
+/* This is for mobile first */
+div.wrap {
+  width: 90%;
+  color: #FFFFFF;
+  max-width: 600px;
+}
+
+/* TEXT */
+p {
+  font-family: sans-serif;
+  font-size: 100%;
+  padding: 4px 0;
+  line-height: 105%;
+}
+
+/* HEADERS */
+
+h1 {
+  font-family: sans-serif;
+  padding: 0 0 10px 0;
+}
+
+h1 a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 300%;
+}
+
+h2 {
+  margin: 0 0 10px 0;
+}
+
+
+/* HOME PAGE */
+
+nav.home {
+  margin: 40px 0;
+}
+
+nav.home ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+nav.home ul li a {
+  text-decoration: none;
+}
+
+nav.home ul li a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* MAIN CONTENT */
+
+nav.content {
+  margin-top: 20px;
+}
+
+nav.content ul li {
+  list-style: none;
+  padding: 10px 0;
+  margin: 4px 0;
+  background: #FFFFFF;
+  text-align: center;
+}
+
+nav.content ul li a {
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #F34343;
+  font-weight: bold;
+}
+
+
+/* FOOTER */
+
+nav.footer {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px 0;
+  border-top: 1px solid white;
+}
+
+nav.footer ul li {
+  list-style: none;
+  display: inline-block;
+  width: 25%;
+}
+
+nav.footer ul li a {
+  text-decoration: none;
+}
+
+nav.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+
+/* FORMS */
+
+.form-container {
+  
+}
+
+.form-label {
+  margin-top: 15px;
+}
+
+.form-input {
+  padding: 5px;
+  width: 95%;
+  max-width: 400px;
+  border: 0px;
+  box-shadow: 3px 3px 3px #ca3737;
+
+}
+
+.form-button {
+  
+}
+
+
+/* REUSABLE CLASSES */
+
+.text-colour {
+  color: #FFFFFF;
+  font-family: sans-serif;
+}
+
+.box-shadow {
+  box-shadow: 3px 3px 3px #ca3737;
+}
+
+/* MEDIA QUERY AT 500PX */
+
+@media (min-width: 500px) { 
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.info {
+  width: 60%;
+  magrin-left: 5%;
+}
+
+.side-bar {
+  width: 35%;
+}
+
+.small-half {
+  width: 45%;
+}
+
+.big-half {
+  width: 50%;
+}
+}/* end of mdia query at 500px */

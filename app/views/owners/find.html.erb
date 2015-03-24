@@ -1,3 +1,4 @@
+<div class="info right">
 <h1><%= @owner.first_name + " " +  @owner.last_name %></h1>
 
 <p>Name: <%= @owner.first_name + " " + @owner.last_name %></p>
@@ -6,18 +7,16 @@
 <p>City: <%= @owner.city %></p>
 <p>State: <%= @owner.state %></p>
 <p>Zip Code: <%= @owner.zip %></p>
+</div><!-- end info right -->
 
-<ul>
-  <li><a href="/findo">Home</a></li>
-  <li><%= link_to "Edit", "/owners/#{params[:id]}/edit" %></li>
-  <li><a href="http://localhost:3000/dogs/new">Add Dog</a></li>
-  <p>The link above will need to be edited when deployed</p>
-</ul>
-
-<p>Will be adding links to view all pets</p>
-
-<ul>
-  <% @dogs.each do |dog| %>
-    <li><%=link_to dog.name, "http://localhost:3000/dogs/#{dog.id}" %></li>
-  <% end %>
-</ul>  
+<div class="side-bar left">
+  <nav class="content">
+    <ul>
+      <li class="box-shadow"><%= link_to "Edit Profile", "/owners/#{params[:id]}/edit" %></li>
+      <li class="box-shadow"><a href="http://localhost:3000/dogs/new">Add Dog</a></li>
+      <% @dogs.each do |dog| %>
+        <li class="box-shadow"><%=link_to "View #{dog.name}", "http://localhost:3000/dogs/#{dog.id}" %></li>
+      <% end %>
+    </ul>
+  </nav>
+</div><!--end side-bar left>

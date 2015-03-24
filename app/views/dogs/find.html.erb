@@ -1,19 +1,24 @@
-<h1><%= @dog.name %></h1>
+<div class="right info">
+  <h1 class="text-colour"><%= @dog.name %></h1>
 
-<p>Name: <%= @dog.name %></p>
-<p>Breed: <%= @dog.breed %></p>
-<p>Age: <%= @dog.age %></p>
-<p>Gender: <%= @dog.gender %></p>
-<p>Colour: <%= @dog.colour %></p>
-<p>Temperament: <%= @dog.temperament.temperament %></p>
-<p>Description: <%= @dog.description %></p>
-<p>Serial Number: <%= @dog.serial_num %></p>
+  <p>Name: <%= @dog.name %></p>
+  <p>Breed: <%= @dog.breed %></p>
+  <p>Age: <%= @dog.age %></p>
+  <p>Gender: <%= @dog.gender %></p>
+  <p>Colour: <%= @dog.colour %></p>
+  <p>Temperament: <%= @dog.temperament.temperament %></p>
+  <p>Description: <%= @dog.description %></p>
+  <p>Serial Number: <%= @dog.serial_num %></p>
+</div><!--end right info -->
 
 
-<ul>
-  <li><a href="/findo">Home</a></li>
-  <li><%= link_to "Owner", "http://localhost:3000/owners/#{@dog.owner.id}" %></li>
-  <li><%= link_to "Edit", "/dogs/#{params[:id]}/edit" %></li>
-  <li><%= link_to "Delete", "/dogs/#{params[:id]}", :method => :delete %></li>
-</ul>
+<div class="left side-bar">
+  <nav class="content">
+    <ul>
+      <li class="box-shadow"><%= link_to "View Owner", "http://localhost:3000/owners/#{@dog.owner.id}" %></li>
+      <li class="box-shadow"><%= link_to "Edit #{@dog.name}", "/dogs/#{params[:id]}/edit" %></li>
+      <li class="box-shadow"><%= link_to "Delete #{@dog.name}", "/dogs/#{params[:id]}", :method => :delete, :id => "delete" %></li>
+    </ul>
+  </nav>
+</div><!-- end left side-bar -->
 

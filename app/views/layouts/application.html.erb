@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FindoRails</title>
+  <title>Findo</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="wrap">
+  <header>
+    <center>
+      <h1><a href="http://localhost:3000/findo" class="text-colour">FINDO</a></h1>
+    </center>
+  </header>
+  <div class="content">
+    <%= yield %>
+  </div><!-- End div Content -->
+  <footer>
+    <nav class="footer clear">
+      <ul>
+        <li><a href="http://localhost:3000/findo" class="text-colour">Home</a></li>
+        <li><a href="#" class="text-colour">About</a></li>
+        <li><a href="#" class="text-colour">Contact</a></li>
+      </ul>
+    </nav><!-- End Footer Nav -->
+  </footer>
+</div><!-- end div wrap -->  
 </body>
 </html>

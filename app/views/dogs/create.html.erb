@@ -1,25 +1,27 @@
 <h1>Create Dog</h1>
 
-<%= form_for @dog, :url => { :action => "save"} do |f| %>
+<div class="form-container">
+  <%= form_for @dog, :url => { :action => "save"} do |f| %>
 
-<p><%= f.label "name" %></p>
-<%= f.text_field ("name") %>
-<p><%= f.label "breed" %></p>
-<%= f.text_field ("breed") %>
-<p><%= f.label "age" %></p>
-<%= f.text_field ("age") %>
-<p><%= f.label "gender" %></p>
-<p class="radio"><%= f.radio_button("gender", 'Male') %> Male</p>
-<p class="radio"><%= f.radio_button("gender", 'Female') %> Female</p>
-<p><%= f.label "colour" %></p>
-<%= f.text_field ("colour") %>
-<p><%= f.label "serial_num" %></p>
-<%= f.text_field ("serial_num") %>
-<p><%= f.label "description" %></p>
-<%= f.text_area ("description") %>
-<p><%= f.label "temperament_id" %></p>
-<%= f.select "temperament_id", temperament_list %>
+  <p class="form-label"><%= f.label "name" %></p>
+  <%= f.text_field ("name"), :class => "form-input" %>
+  <p class="form-label"><%= f.label "breed" %></p>
+  <%= f.text_field ("breed"), :class => "form-input" %>
+  <p class="form-label"><%= f.label "age" %></p>
+  <%= f.text_field ("age"), :class => "form-input" %>
+  <p class="form-label"><%= f.label "gender" %></p>
+  <p class="radio"><%= f.radio_button("gender", 'Male') %> Male</p>
+  <p class="radio"><%= f.radio_button("gender", 'Female') %> Female</p>
+  <p class="form-label"><%= f.label "colour" %></p>
+  <%= f.text_field ("colour"), :class => "form-input" %>
+  <p class="form-label"><%= f.label "serial_num" %></p>
+  <%= f.text_field ("serial_num"), :class => "form-input" %>
+  <p class="form-label"><%= f.label "description" %></p>
+  <%= f.text_area ("description"), :class => "form-input" %>
+  <p class="form-label"><%= f.label "temperament_id" %></p>
+  <%= f.select "temperament_id", temperament_list %>
 
-<br><br>
-<%= f.submit %>
-<% end %>
+  <br><br>
+  <%= f.submit%>
+  <% end %>
+</div><!--end form-container -->
