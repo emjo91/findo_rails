@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150321231424) do
+ActiveRecord::Schema.define(:version => 20150324193449) do
 
   create_table "dogs", :force => true do |t|
     t.string  "name"
@@ -28,12 +28,14 @@ ActiveRecord::Schema.define(:version => 20150321231424) do
   create_table "owners", :force => true do |t|
     t.string  "first_name"
     t.string  "last_name"
-    t.integer "phone_num",  :limit => 8
+    t.integer "phone_num",       :limit => 8
     t.string  "email"
     t.string  "address"
     t.string  "state"
     t.string  "city"
     t.integer "zip"
+    t.text    "username"
+    t.string  "password_digest"
   end
 
   create_table "temperaments", :force => true do |t|
