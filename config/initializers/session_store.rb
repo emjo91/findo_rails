@@ -1,6 +1,6 @@
 # Be sure to restart your server when you modify this file.
 
-FindoRails::Application.config.session_store :cookie_store, key: '_findo_rails_session'
+FindoRails::Application.config.session_store :cookie_store, key: 'Have a cookie'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information

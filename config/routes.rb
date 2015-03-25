@@ -72,6 +72,8 @@ FindoRails::Application.routes.draw do
   
   get "/menu" => 'login#menu'
   
+  get "/logout" => 'login#logout'
+  
   
   
   
