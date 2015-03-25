@@ -1,5 +1,8 @@
 class DogsController < ApplicationController
   
+  before_filter :confirm_logged_in, :except => [:found]
+
+  
   # deletes the dog record in a table.
   # This is working.
   # Should probably add an event listener to this.

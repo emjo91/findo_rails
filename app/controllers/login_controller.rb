@@ -1,5 +1,7 @@
 class LoginController < ApplicationController
   
+  before_filter :confirm_logged_in, :except => [:login, :attempt_login, :logout]
+  
   # This is kind of the main page for users.
   def menu
   end
