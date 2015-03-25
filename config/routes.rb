@@ -66,7 +66,11 @@ FindoRails::Application.routes.draw do
   
   
   # LOGIN PAGE
-  get "/login" => 'owners#login'
+  get "/login" => 'login#login'
+  
+  post "/login" => 'login#attempt_login'
+  
+  get "/menu" => 'login#menu'
   
   
   

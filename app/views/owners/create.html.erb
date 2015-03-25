@@ -2,6 +2,11 @@
 
 <%= form_for @owner, :url => { :action => "save"} do |f| %>
 
+<p class="form-label"><%= f.label "username" %></p>
+<%= f.text_field ("username"), :class => "form-input" %>
+<p class="form-label"><%= f.label "password" %></p>
+<%= f.text_field ("password"), :class => "form-input" %>
+<br><br><br>
 <p class="form-label"><%= f.label "first_name" %></p>
 <%= f.text_field ("first_name"), :class => "form-input" %>
 <p class="form-label"><%= f.label "last_name" %></p>

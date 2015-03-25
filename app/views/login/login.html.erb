@@ -1,0 +1,19 @@
+<h1>LOGIN</h1>
+
+<!-- <form action="#">
+  <p class="form-label">Username</p>
+  <input type="text" class="form-input">
+  <p class="form-label">Password</p>
+  <input type="text" class="form-input">
+  <br><br>
+  <input type="submit">
+</form> -->
+
+<%= form_tag :action => 'attempt_login' do %>
+<p class="form-label"><%= label_tag(:username) %></p>
+<%= text_field_tag(:username) %>
+<p class="form-label"><%= label_tag(:password) %></p>
+<%= password_field_tag(:password) %>
+<br><br>
+<%= submit_tag("Log In") %>
+<% end %>
