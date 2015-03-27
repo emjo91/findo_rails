@@ -1,7 +1,7 @@
 class OwnersController < ApplicationController
   
   before_filter :confirm_logged_in, :except => [:create, :save, :home]
-  
+    
   # There is no delete command for the owner, because owners cannot be deleted.
   
   # This goes to the home page, for the serial_num.
@@ -17,7 +17,7 @@ class OwnersController < ApplicationController
   # Saves brand new data into the table.
   def save
     new_owner = Owner.create(params[:owner])
-    redirect_to controller: "owners", action: "home"
+    redirect_to controller: "login", action: "login"
     # Redirects to the dog profile page.
   end
   
@@ -44,7 +44,7 @@ class OwnersController < ApplicationController
   def update
     @owner = Owner.find(params[:id])
     @owner.update_attributes(params[:owner])
-    redirect_to controller: "owners", action: "home"
+    redirect_to controller: "login", action: "menu"
     # redirects to the dog profile page.
   end
   

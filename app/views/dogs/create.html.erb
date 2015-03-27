@@ -1,4 +1,7 @@
-<h1>Create Dog</h1>
+<%= error_messages_for(@dog) %>
+
+<h1>Add your pup!</h1>
+<p>Tell us a little about them!</p>
 
 <div class="form-container">
   <%= form_for @dog, :url => { :action => "save"} do |f| %>
@@ -20,6 +23,8 @@
   <%= f.text_area ("description"), :class => "form-input" %>
   <p class="form-label"><%= f.label "temperament_id" %></p>
   <%= f.select "temperament_id", temperament_list %>
+  
+  <%= f.hidden_field(:owner_id, :value => session[:user_id])%>
 
   <br><br>
   <%= f.submit%>

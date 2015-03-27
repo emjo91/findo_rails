@@ -1,5 +1,13 @@
-<h1>CONGRATS! YOU'RE LOGGED IN!</h1>
-<p>Ya did it!!!</p>
-<p>Have a cookie </p>
-
-<a href="/logout">LOGOUT</a>
+<div class="menu">
+  <div class="left">
+    <p>Logged in: <%= link_to "#{session[:username]}", "http://localhost:3000/owners/#{session[:user_id]}" %></p>
+  </div><!-- end div containing login info and logout button -->
+  <div class="right padding-bottom">
+    <a href="/logout" >Logout</a>
+  </div><!-- end div containing login info and logout button -->
+</div><!-- Ends the menu div -->
+  
+<center>
+  <h2 class="clear"> Welcome!</h2>
+  <%= image_tag("findo.png") %>
+</center>

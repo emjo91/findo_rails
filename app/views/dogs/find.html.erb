@@ -1,3 +1,9 @@
+<div class="left padding-bottom">
+  <p>Logged in: <%= link_to "#{session[:username]}", "http://localhost:3000/owners/#{session[:user_id]}" %></p>
+</div><!-- end div containing login info and logout button -->
+
+<div class="clear"></div>
+
 <div class="right info">
   <h1 class="text-colour"><%= @dog.name %></h1>
 
@@ -9,6 +15,7 @@
   <p>Temperament: <%= @dog.temperament.temperament %></p>
   <p>Description: <%= @dog.description %></p>
   <p>Serial Number: <%= @dog.serial_num %></p>
+  <br><br>
 </div><!--end right info -->
 
 
@@ -18,7 +25,9 @@
       <li class="box-shadow"><%= link_to "View Owner", "http://localhost:3000/owners/#{@dog.owner.id}" %></li>
       <li class="box-shadow"><%= link_to "Edit #{@dog.name}", "/dogs/#{params[:id]}/edit" %></li>
       <li class="box-shadow"><%= link_to "Delete #{@dog.name}", "/dogs/#{params[:id]}", :method => :delete, :id => "delete" %></li>
+      <li class="box-shadow"><a href="/logout">Logout</a></li>
     </ul>
   </nav>
+  <br><br>
 </div><!-- end left side-bar -->
 

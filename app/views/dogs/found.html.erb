@@ -7,12 +7,13 @@
   <p>Colour: <%= @dog.colour %></p>
   <p>Temperament: <%= @dog.temperament.temperament %>
   <p>Description: <%= @dog.description %></p>
+  <br><br>
 </div><!-- end left -->
 
 <div class="right big-half">
-  <p>Owner Name: <%= @dog.owner.first_name + " " + @dog.owner.last_name %></p>
-  <p>Owner Phone Number: <%= @dog.owner.phone_num %></p>
-  <p>Owner Email: <%= @dog.owner.email %></p>
+  <h2 class="text-colour">Owner: <%= @dog.owner.first_name + " " + @dog.owner.last_name %></h2>
+  <p>Phone Number: <%= @dog.owner.phone_num %></p>
+  <p>Email: <%= @dog.owner.email %></p>
 
   <form action="#">
     <p>Owner's Email</p>

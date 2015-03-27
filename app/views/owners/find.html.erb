@@ -1,3 +1,9 @@
+<div class="left padding-bottom">
+  <p>Logged in: <%= link_to "#{session[:username]}", "http://localhost:3000/owners/#{session[:user_id]}" %></p>
+</div><!-- end div containing login info and logout button -->
+
+<div class="clear"></div>
+
 <div class="info right">
 <h1><%= @owner.first_name + " " +  @owner.last_name %></h1>
 
@@ -12,11 +18,15 @@
 <div class="side-bar left">
   <nav class="content">
     <ul>
+      <li class="box-shadow"><a href="http://localhost:3000/menu">Menu</a></li>
       <li class="box-shadow"><%= link_to "Edit Profile", "/owners/#{params[:id]}/edit" %></li>
+      <li class="box-shadow"><a href="/logout" >Logout</a></li>
       <li class="box-shadow"><a href="http://localhost:3000/dogs/new">Add Dog</a></li>
       <% @dogs.each do |dog| %>
         <li class="box-shadow"><%=link_to "View #{dog.name}", "http://localhost:3000/dogs/#{dog.id}" %></li>
       <% end %>
     </ul>
   </nav>
-</div><!--end side-bar left>
+  <br><br>
+</div><!--end side-bar left -->
+  
